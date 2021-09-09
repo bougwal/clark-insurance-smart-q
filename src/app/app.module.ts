@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { OneOptionComponent } from './components/one-option/one-option.component';
 import { FormsModule } from '@angular/forms';
+import { ManyOptionsComponent } from './components/many-options/many-options.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     MainViewComponent,
     TextComponent,
-    OneOptionComponent, 
+    OneOptionComponent,
+    ManyOptionsComponent, 
   ],
   imports: [
     BrowserModule,
