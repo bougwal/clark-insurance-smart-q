@@ -1,0 +1,7 @@
+<div  id="single-option">
+    <div class="options" *ngFor="let choice of choices; let i = index">
+      <input id="{{question?.identifier}}{{i}}" (change)="moveDownToNextQuestion()" [(ngModel)]="selectedOption" [name]="question?.identifier"
+        [value]="choice?.value" type="radio">
+      <label for="{{question?.identifier}}{{i}}" class="answer_block">{{choice.label}}</label>
+    </div>
+  </div>

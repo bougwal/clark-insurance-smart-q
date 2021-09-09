@@ -9,18 +9,22 @@ import { TextComponent } from './components/text/text.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatInputModule} from '@angular/material/input';
+import { OneOptionComponent } from './components/one-option/one-option.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent, 
     NavbarComponent,
     MainViewComponent,
-    TextComponent, 
+    TextComponent,
+    OneOptionComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
+    FormsModule,
     MatFormFieldModule, 
     MatInputModule
   ],

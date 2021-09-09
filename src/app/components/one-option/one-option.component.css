@@ -1,0 +1,26 @@
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + .answer_block {
+    background-color: rgb(33, 59, 255);
+    cursor: default;
+    color: white;
+    font-weight: 700;
+}
+.answer_block {
+    border: 1px solid #55706d;
+    background-color: rgba(49, 143, 134, 0.611);
+    border-radius: 3px;
+    width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.answer_block:hover {
+    padding-left: 30px;
+    padding-right: 35px;
+    background-color: rgba(82, 182, 172, 0.3);
+}
