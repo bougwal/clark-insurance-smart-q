@@ -1,0 +1,29 @@
+
+.spacer {
+flex: 1;
+}
+
+.toolbar {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 60px;
+display: flex;
+align-items: center;
+background-color: rgb(245, 246, 250);
+color: white;
+font-weight: 600;
+}
+
+.toolbar img {
+margin: 0 16px;
+}
+    
+.clark-logo{
+    height: 80px;
+    width: 80px;
+}
+.profile-image{
+    border-radius: 50%;
+}
