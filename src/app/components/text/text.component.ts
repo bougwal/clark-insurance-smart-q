@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-text',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextComponent implements OnInit {
 
+  @Output() moveDown = new EventEmitter<any>()
+  @Input() question!: any;
+  userAnswer!:any; 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  moveDownToNextQuestion(){
+    this.moveDown.emit({
+      question: this.question, 
+      destination: ''
+    })
+  }
 }
