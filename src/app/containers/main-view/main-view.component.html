@@ -1,8 +1,15 @@
 <!--Nav bar-->
 <app-navbar></app-navbar>
 <div class="content" role="main">
-    <app-text></app-text>
-    <app-one-option></app-one-option>
-    <app-many-options></app-many-options>
+    <div  *ngFor="let question of questions ; let i = index" class="page_wrapper" [class.focus]="i == 0" [id]="question.identifier">
+        <div class="inner_wrapper">
+          <h3>{{question.headline}}</h3>
+          <div *ngIf="question.question_type == 'multiple-choice'">
+                <app-one-option *ngIf="question.multiple === 'false'" [question]="question" (moveDown)="moveDownToNextQuestion($event)"></app-one-option>
+                <app-many-options  *ngIf="question.multiple === 'true'" [question]="question" (moveDown)="moveDownToNextQuestion($event)"></app-many-options>
+          </div>
+          <app-text *ngIf="question.question_type == 'text'" [question]="question" (moveDown)="moveDownToNextQuestion($event)"></app-text>
+      </div>
+    </div>
 </div>
 

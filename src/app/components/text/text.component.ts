@@ -9,11 +9,17 @@ export class TextComponent implements OnInit {
 
   @Output() moveDown = new EventEmitter<any>()
   @Input() question!: any;
-  userAnswer!:any; 
+  answerIsAvailable!:any; 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onPressEnter(event) {
+    if(event.keyCode == 13) {
+      this.moveDownToNextQuestion();
+    }
   }
 
   moveDownToNextQuestion(){
@@ -22,4 +28,5 @@ export class TextComponent implements OnInit {
       destination: ''
     })
   }
+
 }

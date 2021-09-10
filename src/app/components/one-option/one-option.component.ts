@@ -22,7 +22,7 @@ export class OneOptionComponent implements OnInit {
 
     if(jumps.length >0){
       jumps.forEach((jump: any) => {
-        if(jump.condition[0].value === this.selectedOption){
+        if(jump.conditions[0].value === this.selectedOption){
           dest = jump.destination.id
         }
         
@@ -30,7 +30,7 @@ export class OneOptionComponent implements OnInit {
     }
     this.moveDown.emit({
       question: this.question, 
-      destination: dest
+      destination: dest || ''
     })
   }
 

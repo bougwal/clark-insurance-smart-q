@@ -10,6 +10,5 @@
         {{ choice.value }}
       </li>
     </ul>
-    <button class="btn btn-primary">OK</button> 
-    <span>Press OK to move </span>
+    <app-next-button *ngIf="selectedOptions.length > 0" (next)="moveDownToNextQuestion()"></app-next-button>
   </div>

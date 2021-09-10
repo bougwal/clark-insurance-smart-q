@@ -12,6 +12,7 @@ import {MatInputModule} from '@angular/material/input';
 import { OneOptionComponent } from './components/one-option/one-option.component';
 import { FormsModule } from '@angular/forms';
 import { ManyOptionsComponent } from './components/many-options/many-options.component';
+import { NextButtonComponent } from './components/next-button/next-button.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ManyOptionsComponent } from './components/many-options/many-options.com
     MainViewComponent,
     TextComponent,
     OneOptionComponent,
-    ManyOptionsComponent, 
+    ManyOptionsComponent,
+    NextButtonComponent, 
   ],
   imports: [
     BrowserModule,

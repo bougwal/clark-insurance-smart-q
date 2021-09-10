@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ManyOptionsComponent implements OnInit {
 
   @Output() moveDown = new EventEmitter<any>()
+
   @Input() question!: any; 
   selectedOptions: any[] = []; 
   constructor() { }
@@ -27,5 +28,7 @@ export class ManyOptionsComponent implements OnInit {
       destination: ''
     })
   }
+
+
 
 }

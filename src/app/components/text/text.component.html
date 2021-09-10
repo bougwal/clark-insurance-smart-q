@@ -1,7 +1,5 @@
 <mat-form-field appearance="fill">
-    <input  matInput autocomplete="off">
+    <input  matInput (keypress)="onPressEnter($event)" autocomplete="off">
 </mat-form-field>
-<div>
-    <button class="btn btn-primary">OK</button> 
-    <span>Press OK to move </span>
-</div>
+<app-next-button  (nextButton)="moveDownToNextQuestion()"></app-next-button>
+
