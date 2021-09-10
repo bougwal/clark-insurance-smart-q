@@ -1,0 +1,10 @@
+.btn{
+    width: 90px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.btn-primary {
+    color: #fff;
+    background-color: blue;
+    border-color: #0d6efd;
+}

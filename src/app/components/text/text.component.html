@@ -1,5 +1,7 @@
 <mat-form-field appearance="fill">
-    <input  matInput (keypress)="onPressEnter($event)" autocomplete="off">
+    <input  matInput (keypress)="onPressEnter($event)" autocomplete="off" #input>
+    <mat-hint [hidden]="input.value.length >= 3">Please enter an answer with more than 3 charachters</mat-hint>
+
 </mat-form-field>
-<app-next-button  (nextButton)="moveDownToNextQuestion()"></app-next-button>
+<app-next-button [hidden]="input.value.length < 3" (nextButton)="moveDownToNextQuestion()"></app-next-button>
 
