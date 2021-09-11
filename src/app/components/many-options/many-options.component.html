@@ -1,14 +1,14 @@
 <div id="multi-option">
-    <input id="question.identifier" class="typeform_input" type="text">
+    <input id="question?.identifier" class="typeform_input" type="text">
     <div class="selected_options">
       <span *ngFor="let option of selectedOptions">
         {{option.value}}
       </span>
     </div>
     <ul class="chips">
-      <li class="chip" *ngFor="let choice of question.choices" (click)="addOptions(choice)" [class.selected]="selectedOptions.indexOf(choice) !== -1">
+      <li class="chip" *ngFor="let choice of question?.choices" (click)="addOptions(choice)" [class.selected]="selectedOptions.indexOf(choice) !== -1">
         {{ choice.value }}
       </li>
     </ul>
-    <app-next-button *ngIf="selectedOptions.length > 0" (next)="moveDownToNextQuestion()"></app-next-button>
+    <app-next-button *ngIf="selectedOptions?.length > 0" (next)="moveDownToNextQuestion()"></app-next-button>
   </div>

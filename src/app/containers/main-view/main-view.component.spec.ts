@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ManyOptionsComponent } from 'src/app/components/many-options/many-options.component';
+import { OneOptionComponent } from 'src/app/components/one-option/one-option.component';
 
 import { MainViewComponent } from './main-view.component';
 
@@ -8,7 +10,7 @@ describe('MainViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainViewComponent ]
+      declarations: [ MainViewComponent, OneOptionComponent, ManyOptionsComponent ]
     })
     .compileComponents();
   });

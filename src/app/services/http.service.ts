@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators'
-import { ErrorHandlerService } from './error-handling.service';
+import { ErrorHandlingService } from './error-handling.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class HttpService {
 
   public questionnaire$: Observable<any>;
 
-  constructor(private errorService: ErrorHandlerService) {
+  constructor(private errorService: ErrorHandlingService) {
     this.questionnaire$ = of(this.questionnair)
    }
 
