@@ -10,7 +10,7 @@ export class ManyOptionsComponent implements OnInit {
   @Output() moveDown = new EventEmitter<any>()
 
   @Input() question!: any; 
-  selectedOptions: any[] = []; 
+  selectedOptions!: any[];
   constructor() { }
 
   ngOnInit(): void {
